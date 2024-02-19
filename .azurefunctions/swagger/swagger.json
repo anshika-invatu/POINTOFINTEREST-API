@@ -1,0 +1,45 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "title": "POI API",
+      "version": "v1"
+    },
+    "host": "api.vourity.com",
+    "basePath": "/api/v1",
+    "schemes": [
+      "https"
+    ],
+    "paths": {
+      "/ping": {
+        "get": {
+          "operationId": "ping",
+          "description": "health check",
+          "summary": "Health check",
+          "produces": [
+            "application/json"
+          ],
+          "consumes": [
+            "application/json"
+          ],
+          "parameters": [
+            
+          ],
+          "responses": {
+            "200": {
+              "code": 200,
+              "text": "pong"
+            }
+          },
+          "security": [
+            {
+              "apikeyQuery": []
+            }
+          ]
+        }
+      }
+    },
+    "definitions": {
+      
+    },
+    "tags": []
+  }

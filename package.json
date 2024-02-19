@@ -1,0 +1,32 @@
+{
+  "name": "pointofinterest-api",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "azure-functions-pack": "funcpack pack -c ./",
+    "lint": "eslint .",
+    "test": "mocha --exit --no-timeouts -r ./test.options.js */*.spec.js",
+    "test:watch": "chokidar '*/*.js' -c 'npm test'",
+    "test:debug": "mocha --inspect-brk=9230 --exit --no-timeouts -r ./test.options.js */*.spec.js",
+    "start:dev": "func host start -p 7076 -w node:debug=8076"
+  },
+  "author": "Lalit Rajput <llmsjraj@gmail.com>",
+  "dependencies": {
+    "bluebird": "3.5.1",
+    "mongodb": "^6.3.0",
+    "request": "^2.88.2",
+    "request-promise": "4.2.2",
+    "uuid": "^8.3.2",
+    "validator": "^13.6.0",
+    "winston-loggly-bulk": "^2.0.3"
+  },
+  "devDependencies": {
+    "azure-functions-pack": "1.0.0",
+    "chai": "4.1.2",
+    "chai-as-promised": "7.1.1",
+    "chokidar-cli": "^1.2.3",
+    "dotenv": "^5.0.1",
+    "eslint": "4.19.1",
+    "mocha": "5.1.0"
+  }
+}
